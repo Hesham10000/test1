@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserRightConfig>
+	<!-- Production properties -->
+	<!--
+        - the pos_objecttype attribute can be used in order to give the user
+          only the access right for the listed objects
+        - the neg_objecttype attribute can be used in order to give the user
+          access to ALL objects, except the listed ones
+        - it is NOT possible (right now) to use the pos_objecttype and the
+          neg_objecttype attribute at the same time! When you specify both
+          attributes only the pos_objecttype will take effect, the content
+          of the neg_objecttype will be IGNORED.
+        
+        so when there exist the Objects A, B, C and D, then pos_objecttype ="A,B"
+        would be identical to neg_objecttype ="C,D" with the exception, that when
+        the Object list will be extended to A,B,C,D,E then the user will auto-
+        matically get access to obejct 'E' when the neg_objecttype attribute is
+        used. In the case of the use of pos_objecttype the ADMIN have to take
+        action everytime a new object is added to the list..
+    -->
+	<accessright name="hasCopyAsTranslate" always-true="true">
+	</accessright>
+	<accessright name="isTranslator" always-true="true">
+	</accessright>
+	<!--accessright name="isTranslationManager">
+		<object name="parisi"/>
+	</accessright-->
+	<accessright name="isNoTranslator">
+		<object name="trahey"/>
+		<object name="harder"/>
+		<!--object name="parisi"/-->
+		<object name="yambrick"/>
+		<object name="dubay"/>
+		<!--object name="richa"/-->
+		<object name="zumbach"/>
+		<object name="luzynski"/>
+		<object name="walsh"/>
+	</accessright>
+	<accessright name="isAuthor">
+		<object name="test_op_all"/>
+		<object name="test_op_vaw"/>
+		<object name="test_op_vaw1"/>
+		<object name="test_op_vaw2"/>
+		<object name="test_op_fes"/>
+		<object name="test_op_fes1"/>
+		<object name="test_op_fes2"/>
+		<object name="test_op_comsa"/>
+		<object name="test_op_comsa1"/>
+		<object name="test_op_comsa2"/>
+		<object name="test_op_mrx"/>
+		<object name="test_op_mrx1"/>
+		<object name="test_op_mrx2"/>
+		<object name="test_op_mry"/>
+		<object name="test_op_mry1"/>
+		<object name="test_op_mry2"/>
+		<object name="test_op_mrz"/>
+		<object name="test_op_mrz1"/>
+		<object name="test_op_mrz2"/>
+		<object name="test_op_thiesen"/>
+		<object name="test_op_thiesen1"/>
+		<object name="test_op_thiesen2"/>
+		<object name="america001"/>
+		<object name="vanputten"/>
+		<object name="fortier"/>
+		<object name="trahey"/>
+		<object name="brown"/>
+		<object name="harder"/>
+		<object name="parisi"/>
+		<object name="yambrick"/>
+		<object name="dubay"/>
+		<object name="richa"/>
+		<object name="zumbach"/>
+		<object name="luzynski"/>
+		<object name="walsh"/>
+		<object name="gondwana001"/>
+		<object name="gondwana002"/>
+		<object name="op_srodriguez"/>
+		<object name="op_jrodriguez"/>
+		<object name="op_fuentes"/>
+		<object name="op_vidal"/>
+		<object name="op_malek"/>
+		<object name="op_zverec"/>
+		<object name="op_schaper"/>
+		<object name="op_bruemmer"/>
+		<object name="op_gilewski"/>
+		<object name="op_kriegler"/>
+		<object name="op_borges"/>
+		<object name="op_kinoshita"/>
+		<object name="op_silva"/>
+		<object name="op_costa"/>
+		<object name="op_madeira"/>
+		<object name="niemeyer"/>
+		<object name="op_grominski"/>
+		<object name="op_suelflow"/>
+		<object name="op_lemmnitz"/>
+		<object name="op_tautenhahn"/>
+		<object name="op_seidel"/>
+		<object name="op_noetzoldt"/>
+		<object name="op_hecker"/>
+		<object name="op_wiskow"/>
+		<object name="op_dobbrick"/>
+		<object name="op_milinkovic"/>
+		<object name="op_schroeder"/>
+		<object name="op_goder"/>
+		<object name="op_herrmann"/>
+	</accessright>
+	<!--
+    OperatorUsers can only see vw_si_documents, that have either set NONE
+    vw_operator attribute, or where the vw_operator attribute have the
+    value that is listed in the pos_objecttype list.
+    As name only USERNAMES make sense! (no groups/markets)
+    -->
+	<accessright name="isOperatorUser" casesensitive="true">
+		<object name="test_op_all" pos_objecttype="VAW,FES,COMSA,OPMRX,OPMRY,OPMRZ,THIESEN"/>
+		<object name="test_op_vaw" pos_objecttype="VAW"/>
+		<object name="test_op_vaw1" pos_objecttype="VAW"/>
+		<object name="test_op_vaw2" pos_objecttype="VAW"/>
+		<object name="test_op_fes" pos_objecttype="FES"/>
+		<object name="test_op_fes1" pos_objecttype="FES"/>
+		<object name="test_op_fes2" pos_objecttype="FES"/>
+		<object name="test_op_comsa" pos_objecttype="COMSA"/>
+		<object name="test_op_comsa1" pos_objecttype="COMSA"/>
+		<object name="test_op_comsa2" pos_objecttype="COMSA"/>
+		<object name="test_op_mrx" pos_objecttype="OPMRX"/>
+		<object name="test_op_mrx1" pos_objecttype="OPMRX"/>
+		<object name="test_op_mrx2" pos_objecttype="OPMRX"/>
+		<object name="test_op_mry" pos_objecttype="OPMRY"/>
+		<object name="test_op_mry1" pos_objecttype="OPMRY"/>
+		<object name="test_op_mry2" pos_objecttype="OPMRY"/>
+		<object name="test_op_mrz" pos_objecttype="OPMRZ"/>
+		<object name="test_op_mrz1" pos_objecttype="OPMRZ"/>
+		<object name="test_op_mrz2" pos_objecttype="OPMRZ"/>
+		<object name="test_op_thiesen" pos_objecttype="THIESEN"/>
+		<object name="test_op_thiesen1" pos_objecttype="THIESEN"/>
+		<object name="test_op_thiesen2" pos_objecttype="THIESEN"/>
+		<object name="op_srodriguez" pos_objecttype="MAZEL"/>
+		<object name="op_jrodriguez" pos_objecttype="MAZEL"/>
+		<object name="op_fuentes" pos_objecttype="MAZEL"/>
+		<object name="op_vidal" pos_objecttype="MAZEL"/>
+		<object name="op_malek" pos_objecttype="SKODA"/>
+		<object name="op_zverec" pos_objecttype="ATC"/>
+		<object name="op_schaper" pos_objecttype="FSZM"/>
+		<object name="op_bruemmer" pos_objecttype="FSZM"/>
+		<object name="op_gilewski" pos_objecttype="FSZM"/>
+		<object name="op_kriegler" pos_objecttype="FSZM"/>
+		<object name="niemeyer" pos_objecttype="FSZM"/>
+		<object name="op_borges" pos_objecttype="ARVATO"/>
+		<object name="op_kinoshita" pos_objecttype="ARVATO"/>
+		<object name="op_silva" pos_objecttype="ARVATO"/>
+		<object name="op_costa" pos_objecttype="ARVATO"/>
+		<object name="op_madeira" pos_objecttype="ARVATO"/>
+		<object name="op_grominski" pos_objecttype="RUECKER"/>
+		<object name="op_suelflow" pos_objecttype="RUECKER"/>
+		<object name="op_lemmnitz" pos_objecttype="RUECKER"/>
+		<object name="op_tautenhahn" pos_objecttype="FES"/>
+		<object name="op_seidel" pos_objecttype="FES"/>
+		<object name="op_noetzoldt" pos_objecttype="ARVATO"/>
+		<object name="op_hecker" pos_objecttype="ARVATO"/>
+		<object name="op_wiskow" pos_objecttype="ARVATO"/>
+		<object name="op_dobbrick" pos_objecttype="FSZM"/>
+		<object name="op_milinkovic" pos_objecttype="ARVATO"/>
+		<object name="op_schroeder" pos_objecttype="ARVATO"/>
+		<object name="op_goder" pos_objecttype="ARVATO"/>
+		<object name="op_goder" pos_objecttype="FSZM"/>
+	</accessright>
+	<!--
+    As name only USERNAMES make sense! (no groups/markets)
+    -->
+	<accessright name="isBrandRestrictedUser" casesensitive="true">
+		<object name="kupfer" pos_objecttype="A,C,N,S,V,Z"/>
+		<object name="test_rm_vw" pos_objecttype="V,Z"/>
+		<object name="test_rm_audi" pos_objecttype="A"/>
+		<object name="test_rm_seat" pos_objecttype="S"/>
+		<object name="test_rm_skoda" pos_objecttype="C"/>
+		<object name="test_rm_nutz" pos_objecttype="N"/>
+		<object name="test_rm_vw1" pos_objecttype="V,Z"/>
+		<object name="test_rm_audi1" pos_objecttype="A"/>
+		<object name="test_rm_seat1" pos_objecttype="S"/>
+		<object name="test_rm_skoda1" pos_objecttype="C"/>
+		<object name="test_rm_nutz1" pos_objecttype="N"/>
+		<object name="demir" pos_objecttype="C"/>
+		<object name="altintas" pos_objecttype="C"/>
+		<object name="gozkan" pos_objecttype="C"/>
+		<object name="toykan" pos_objecttype="C"/>
+		<object name="chakravarthy" pos_objecttype="V"/>
+		<object name="malhotra" pos_objecttype="V"/>
+		<object name="wolter" pos_objecttype="V"/>
+		<object name="pisheff" pos_objecttype="C"/>
+		<object name="tischenko" pos_objecttype="V,N,C"/>
+		<object name="kolcak" pos_objecttype="S"/>
+		<object name="ciobotaru" pos_objecttype="C"/>
+		<object name="maggiori" pos_objecttype="C"/>
+		<object name="pleines" pos_objecttype="V,C"/>
+		<object name="klimov" pos_objecttype="V,C"/>
+		<object name="pyresin" pos_objecttype="V,C"/>
+		<object name="drobotov" pos_objecttype="V,C"/>
+		<object name="romanov" pos_objecttype="V,C"/>
+		<object name="rutschkin" pos_objecttype="V,C"/>
+		<object name="avakumov" pos_objecttype="V,C"/>
+		<object name="han" pos_objecttype="A"/>
+		<object name="wangbao" pos_objecttype="A,V,Z"/>
+		<object name="rm_martinez" pos_objecttype="S"/>
+		<object name="rm_sergio" pos_objecttype="S"/>
+		<object name="rm_kovar" pos_objecttype="C"/>
+		<object name="rm_weil" pos_objecttype="N"/>
+		<object name="rm_soehnel" pos_objecttype="N"/>
+		<object name="niemeyer" pos_objecttype="N"/>
+		<object name="rm_hoppe" pos_objecttype="V"/>
+		<object name="rm_fahr" pos_objecttype="V"/>
+		<object name="rm_schaar" pos_objecttype="V"/>
+		<object name="rm_diedecke" pos_objecttype="V"/>
+		<object name="rm_terpoorten" pos_objecttype="V"/>
+		<object name="rm_silva" pos_objecttype="V"/>
+		<object name="rm_kiss" pos_objecttype="V"/>
+		<object name="rm_keck" pos_objecttype="V"/>
+	</accessright>
+	<accessright name="hasLocalAreaView">
+		<object name="kupfer"/>
+		<object name="op_srodriguez"/>
+		<object name="op_jrodriguez"/>
+		<object name="op_fuentes"/>
+		<object name="op_vidal"/>
+		<object name="op_malek"/>
+		<object name="op_zverec"/>
+		<object name="op_schaper"/>
+		<object name="op_bruemmer"/>
+		<object name="op_gilewski"/>
+		<object name="op_kriegler"/>
+		<object name="niemeyer"/>
+		<object name="op_grominski"/>
+		<object name="op_suelflow"/>
+		<object name="op_lemmnitz"/>
+		<object name="rm_martinez"/>
+		<object name="rm_sergio"/>
+		<object name="rm_kovar"/>
+		<object name="rm_weil"/>
+		<object name="rm_soehnel"/>
+		<object name="rm_hoppe"/>
+		<object name="rm_fahr"/>
+		<object name="rm_schaar"/>
+		<object name="rm_diedecke"/>
+		<object name="rm_terpoorten"/>
+		<object name="op_borges"/>
+		<object name="op_kinoshita"/>
+		<object name="op_silva"/>
+		<object name="op_costa"/>
+		<object name="op_madeira"/>
+		<object name="rm_silva"/>
+		<object name="rm_kiss"/>
+		<object name="rm_keck"/>
+		<object name="rm_drygalla"/>
+		<object name="rm_hesse"/>
+		<object name="rm_zrieschling"/>
+		<object name="op_tautenhahn"/>
+		<object name="op_seidel"/>
+		<object name="op_noetzoldt"/>
+		<object name="op_hecker"/>
+		<object name="op_wiskow"/>
+		<object name="op_dobbrick"/>
+		<object name="op_milinkovic"/>
+		<object name="op_schroeder"/>
+		<object name="op_goder"/>
+		<object name="op_herrmann"/>
+	</accessright>
+	<accessright name="hasReleaseForDocType">
+		<object name="kupfer" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_all" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_all1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_vw" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_audi" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_seat" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_skoda" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_nutz" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_vw1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_audi1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_seat1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_skoda1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_nutz1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_slp_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="richa" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+		<object name="brown" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="demir" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="chakravarthy" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="malhotra" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="pisheff" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="tischenko" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="ciobotaru" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="vindavs" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="maggiori" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="kolcak" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="farre" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="wangbao" pos_objecttype="vw_au_book,vw_au3_book,vw_cf_book,vw_igg3_book,vw_kah3_book,vw_ki3_book,vw_rm3_book,vw_slp_book"/>
+		<object name="rm_martinez" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_sergio" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_kovar" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_weil" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_soehnel" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="niemeyer" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_hoppe" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_fahr" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_schaar" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_diedecke" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_terpoorten" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_silva" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_kiss" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_keck" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_drygalla" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_hesse" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_zrieschling" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+	</accessright>
+	<accessright name="hasSimpleDownload">
+		<object name="thi0001"/>
+		<object name="huk0001"/>
+		<object name="kup0001"/>
+		<object name="kupfer" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="comsa001" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_all" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_vw" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_audi" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_seat" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_skoda" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_nutz" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_all1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_vw1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_audi1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_seat1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_skoda1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="test_rm_nutz1" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_martinez" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_sergio" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_kovar" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_weil" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_soehnel" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="niemeyer" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_hoppe" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_fahr" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_schaar" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_diedecke" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_terpoorten" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_silva" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_kiss" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_keck" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_drygalla" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_hesse" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+		<object name="rm_zrieschling" pos_objecttype="vw_islp_document,vw_slp_book,vw_islp_part_book,vw_islp_res_ebo_book,vw_islp_res_headline_book,vw_islp_res_option_book"/>
+	</accessright>
+	<accessright name="hasCreateNewDocument">
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_islp_document,vw_slp_book"/>
+		<object name="original001" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="kupfer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_martinez" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_sergio" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kovar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_weil" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_soehnel" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="niemeyer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hoppe" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_fahr" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_schaar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_diedecke" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_terpoorten" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_silva" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kiss" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_keck" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_drygalla" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hesse" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_zrieschling" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="richa" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+	</accessright>
+	<accessright name="hasCreateEditDocumentRequest">
+		<object name="original001" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="kupfer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_martinez" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_sergio" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kovar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_weil" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_soehnel" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="niemeyer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hoppe" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_fahr" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_schaar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_diedecke" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_terpoorten" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_silva" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kiss" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_keck" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_drygalla" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hesse" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_zrieschling" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_slp_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="trahey" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="harder" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="parisi" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="yambrick" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="dubay" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="richa" pos_objecttype="vw_slp_book"/>
+		<!--object name="zumbach" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="brown" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="gondwana001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+	</accessright>
+	<accessright name="hasPrepareTranslationRequest">
+		<object name="america001" pos_objecttype="vw_sxml_rm3_book,vw_sxml_ki3_book,vw_sxml_igg3_book,vw_sxml_kah3_book,vw_slp_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="trahey" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="harder" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="parisi" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="yambrick" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="dubay" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="richa" pos_objecttype="vw_slp_book"/>
+		<!--object name="zumbach" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="brown" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="gondwana001" pos_objecttype="vw_slp_book,vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+	</accessright>
+	<accessright name="hasMetaDataChangeRequest">
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="trahey" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="harder" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="parisi" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<!--object name="yambrick" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="dubay" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="richa" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+		<!--object name="zumbach" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<!--object name="brown" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/-->
+		<object name="dequin" pos_objecttype="vw_slp_book,vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="gondwana001" pos_objecttype="vw_slp_book,vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+	</accessright>
+	<accessright name="hasMetaPatching">
+		<object name="america001" pos_objecttype="vw_slp_book"/>
+		<object name="original001" pos_objecttype="vw_slp_book"/>
+		<object name="training_original001" pos_objecttype="vw_slp_book"/>
+		<object name="thi0001" pos_objecttype="vw_slp_book"/>
+		<object name="huk0001" pos_objecttype="vw_slp_book"/>
+		<object name="kup0001" pos_objecttype="vw_slp_book"/>
+	</accessright>
+	<accessright name="hasCopyFromTemplateForDocType">
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="gondwana001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+	</accessright>
+	<accessright name="hasUpdateDocsReport">
+		<object name="parisi"/>
+		<object name="gondwana002"/>
+		<object name="america001"/>
+	</accessright>
+	<accessright name="hasComfortDownload">
+		<object name="original001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book,vw_k3_book,vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="gondwana001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book,vw_k3_book,vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_islp_res_ebo_book"/>
+		<object name="grossju" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="schulzkl" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="seat_intern001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="slowenien001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="willems" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="huk0001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="trainer001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student002" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student003" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student004" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student005" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student006" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student007" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student008" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student009" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="student010" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="training_original001" pos_objecttype="vw_au3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<!--USA-Market with SGML DoctypeHandler-->
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book,vw_ki3_book,vw_kah3_book,vw_rm3_book,vw_igg3_book"/>
+		<object name="fortier" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="dequin" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="trahey" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="harder" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="parisi" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="yambrick" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="kowalski" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="dubay" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="brown" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="luzynski" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="walsh" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="richa" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+		<object name="zumbach" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+		<!--ISLP DoctypeHandler-->
+		<object name="kupfer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_all" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_vaw" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_vaw1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_vaw2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_fes" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_fes1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_fes2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_comsa" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_comsa1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_comsa2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrx" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrx1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrx2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mry" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mry1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mry2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrz" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrz1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_mrz2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_thiesen" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_thiesen1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_op_thiesen2" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_all1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_vw1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_audi1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_seat1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_skoda1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="test_rm_nutz1" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_srodriguez" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_jrodriguez" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_fuentes" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_vidal" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_malek" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_zverec" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_schaper" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_bruemmer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_gilewski" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_kriegler" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="niemeyer" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_grominski" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_suelflow" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_lemmnitz" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_martinez" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_sergio" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kovar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_weil" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_soehnel" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hoppe" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_fahr" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_schaar" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_diedecke" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_terpoorten" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_borges" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_kinoshita" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_silva" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_costa" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_madeira" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_silva" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_kiss" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_keck" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_drygalla" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_hesse" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="rm_zrieschling" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_tautenhahn" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_seidel" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_noetzoldt" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_hecker" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_wiskow" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_dobbrick" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_milinkovic" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_schroeder" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_goder" pos_objecttype="vw_islp_document,vw_slp_book"/>
+		<object name="op_herrmann" pos_objecttype="vw_islp_document,vw_slp_book"/>
+	</accessright>
+	<accessright name="hasImportToLocalMarket">
+		<!-- since the "import" Menu item will be shown in the Gitta-toolbar
+    it does not really make sense to restrict it for a specific doctype!
+    OR to be more precise: at this point where we want/have to display
+    the menu item there are NO DOCTYPE avaiable... since the doctype will
+    be detected during the import process itself... [it might be, that
+    we will add later code, that do the access right checking in the
+    import itself -> but I am not sure yet]-->
+		<object name="america001"/>
+		<object name="kup0001"/>
+		<object name="huk0001"/>
+		<object name="huk007"/>
+		<object name="faw-vw001"/>
+		<object name="gondwana001"/>
+		<object name="chinap001"/>
+		<object name="training_original001"/>
+		<object name="china_audi001"/>
+		<object name="chinap001"/>
+		<object name="daenemark001"/>
+		<object name="griechenland001"/>
+		<object name="japan001"/>
+		<object name="kroatien001"/>
+		<object name="polen_vw001"/>
+		<object name="polen001"/>
+		<object name="slowenien001"/>
+		<object name="tschechien_vw001"/>
+		<object name="tuerkei001"/>
+		<object name="ungarn_vw001"/>
+		<object name="ungarn001"/>
+		<object name="russland001"/>
+		<object name="vanputten"/>
+		<object name="importusa"/>
+		<object name="parisi"/>
+		<object name="richa"/>
+	</accessright>
+	<accessright name="isDocTypeRestrictedImportUser">
+		<object name="gondwana002"/>
+		<object name="vanputten"/>
+		<object name="importusa"/>
+		<object name="parisi"/>
+		<object name="richa"/>
+	</accessright>
+	<accessright name="hasImportForDocType">
+		<object name="america001" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="gondwana002" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="vanputten" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="importusa" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="parisi" pos_objecttype="vw_sgml_rm3_book,vw_sgml_ki3_book,vw_sgml_igg3_book,vw_sgml_kah3_book"/>
+		<object name="richa" pos_objecttype="vw_slp_book,vw_slpexternal_book"/>
+	</accessright>
+	<accessright name="hasCreateProfileForOthers">
+		<object name="original001"/>
+		<!--user name="original001" neg_objecttype="japan001,original001"/-->
+	</accessright>
+	<accessright name="hasElsaUpdate">
+		<object name="accad"/>
+		<object name="aguirre"/>
+		<object name="alahwal"/>
+		<object name="ali"/>
+		<object name="alonso"/>
+		<object name="altintas"/>
+		<object name="america001"/>
+		<object name="ancy"/>
+		<object name="angilella"/>
+		<object name="arce"/>
+		<object name="audi_intern001"/>
+		<object name="avakumov"/>
+		<object name="aygunduz"/>
+		<object name="banoub"/>
+		<object name="banoub_d"/>
+		<object name="baumann"/>
+		<object name="bebr"/>
+		<object name="belotserkowsky"/>
+		<object name="benny"/>
+		<object name="benson"/>
+		<object name="bjarning"/>
+		<object name="blazevic"/>
+		<object name="boekenkamp"/>
+		<object name="boquin"/>
+		<object name="bowerman"/>
+		<object name="brown"/>
+		<object name="buc0001"/>
+		<object name="burrica"/>
+		<object name="cabre"/>
+		<object name="cabrera"/>
+		<object name="calderin"/>
+		<object name="calles"/>
+		<object name="calvo"/>
+		<object name="camina"/>
+		<object name="chakravarthy"/>
+		<object name="ciobotaru"/>
+		<object name="correa"/>
+		<object name="dahan"/>
+		<object name="dat001"/>
+		<object name="delaveuve"/>
+		<object name="demir"/>
+		<object name="diogo"/>
+		<object name="doull"/>
+		<object name="drobotov"/>
+		<object name="dunay"/>
+		<object name="dv20sr1"/>
+		<object name="dv60foe"/>
+		<object name="efthimiou"/>
+		<object name="ellingsen"/>
+		<object name="elsa_updates"/>
+		<object name="erdogan"/>
+		<object name="f_ferrari"/>
+		<object name="faerber"/>
+		<object name="fernandez"/>
+		<object name="finnland_update"/>
+		<object name="fiorio"/>
+		<object name="fogliazza"/>
+		<object name="fortier"/>
+		<object name="fruehwein"/>
+		<object name="fuk0001"/>
+		<object name="gaete"/>
+		<object name="galdino"/>
+		<object name="gardin"/>
+		<object name="ghantous"/>
+		<object name="ghita"/>
+		<object name="gluszek"/>
+		<object name="golovanova"/>
+		<object name="gondwana001"/>
+		<object name="gondwana002"/>
+		<object name="gondwana003"/>
+		<object name="gondwana007"/>
+		<object name="gozkan"/>
+		<object name="grape"/>
+		<object name="grasmo"/>
+		<object name="greedy_gr"/>
+		<object name="greedy_tr"/>
+		<object name="grinmanas"/>
+		<object name="grochowina"/>
+		<object name="gubanec"/>
+		<object name="gumeniuk"/>
+		<object name="handzic"/>
+		<object name="hanzekovic"/>
+		<object name="harris"/>
+		<object name="has"/>
+		<object name="haubold"/>
+		<object name="henn"/>
+		<object name="hoefer"/>
+		<object name="hoh"/>
+		<object name="honkala"/>
+		<object name="hreinsson"/>
+		<object name="huettinger"/>
+		<object name="hybacek"/>
+		<object name="huk0001"/>
+		<object name="ima0001"/>
+		<object name="ivg"/>
+		<object name="ivg_seat"/>
+		<object name="ivory"/>
+		<object name="janssens"/>
+		<object name="johnson"/>
+		<object name="jordan"/>
+		<object name="kalman"/>
+		<object name="kamenov"/>
+		<object name="karako"/>
+		<object name="kassabov"/>
+		<object name="keck"/>
+		<object name="klaric"/>
+		<object name="klimov"/>
+		<object name="knytlova"/>
+		<object name="knytlova_vw"/>
+		<object name="kolcak"/>
+		<object name="kolozsvari"/>
+		<object name="kountouras"/>
+		<object name="kovar"/>
+		<object name="krasts"/>
+		<object name="kroeger"/>
+		<object name="kubrak"/>
+		<object name="kulisek"/>
+		<object name="kultyavov"/>
+		<object name="kumar"/>
+		<object name="kup0001"/>
+		<object name="kurtic"/>
+		<object name="kwon"/>
+		<object name="larsen"/>
+		<object name="lee"/>
+		<object name="leon"/>
+		<object name="lepore"/>
+		<object name="liehunen"/>
+		<object name="m_arch"/>
+		<object name="maatta"/>
+		<object name="maggiori"/>
+		<object name="mahmoud"/>
+		<object name="malanitschew"/>
+		<object name="malhotra"/>
+		<object name="mammadov"/>
+		<object name="manfredi"/>
+		<object name="manful"/>
+		<object name="mannering"/>
+		<object name="matri"/>
+		<object name="mealha"/>
+		<object name="meyers"/>
+		<object name="mischin"/>
+		<object name="misutova"/>
+		<object name="montero"/>
+		<object name="mossolly"/>
+		<object name="mueller"/>
+		<object name="muzicka"/>
+		<object name="nieto"/>
+		<object name="opheim"/>
+		<object name="ottosen"/>
+		<object name="ozkan"/>
+		<object name="parisi"/>
+		<object name="pasanen"/>
+		<object name="pedersen"/>
+		<object name="pisheff"/>
+		<object name="pla"/>
+		<object name="pleines"/>
+		<object name="poa0001"/>
+		<object name="polat"/>
+		<object name="porto"/>
+		<object name="portugal_update"/>
+		<object name="pramudita"/>
+		<object name="pratt"/>
+		<object name="prazeres"/>
+		<object name="pyresin"/>
+		<object name="rahal"/>
+		<object name="raizzaro"/>
+		<object name="ramosp"/>
+		<object name="rasmussen"/>
+		<object name="razali"/>
+		<object name="rekovsky"/>
+		<object name="rebollar"/>
+		<object name="richa"/>
+		<object name="robinson"/>
+		<object name="rodriguez_c"/>
+		<object name="romanov"/>
+		<object name="rowland"/>
+		<object name="rudzeiss"/>
+		<object name="rutschkin"/>
+		<object name="ryc0001"/>
+		<object name="sampson"/>
+		<object name="sanchez"/>
+		<object name="santos"/>
+		<object name="schmiga"/>
+		<object name="schnigenberg"/>
+		<object name="schulz"/>
+		<object name="schulzkl"/>
+		<object name="seat_update"/>
+		<object name="selamis"/>
+		<object name="seleznev"/>
+		<object name="sempol"/>
+		<object name="ser0001"/>
+		<object name="seinsche"/>
+		<object name="setiadhy"/>
+		<object name="shesternina"/>
+		<object name="shokiche"/>
+		<object name="simonyan"/>
+		<object name="spassow"/>
+		<object name="sults"/>
+		<object name="surabhi"/>
+		<object name="taka01de"/>
+		<object name="taka01gb"/>
+		<object name="taka01us"/>
+		<object name="tebaldi"/>
+		<object name="tengelmann"/>
+		<object name="thorarinsson"/>
+		<object name="thorarinsson_seat"/>
+		<object name="thottoth"/>
+		<object name="tischenko"/>
+		<object name="tmj0001"/>
+		<object name="tobiscju"/>
+		<object name="torres"/>
+		<object name="trigub"/>
+		<object name="tyrakowski"/>
+		<object name="udrovskis"/>
+		<object name="vakin"/>
+		<object name="vasconcellos"/>
+		<object name="vassilopoulos"/>
+		<object name="vawchinap001"/>
+		<object name="venter"/>
+		<object name="verbic"/>
+		<object name="vogt"/>
+		<object name="voiteshonok"/>
+		<object name="voronkov"/>
+		<object name="vw_intern001"/>
+		<object name="wangbao"/>
+		<object name="watts"/>
+		<object name="weil"/>
+		<object name="whenlock"/>
+		<object name="wibiralski"/>
+		<object name="willems"/>
+		<object name="wissam"/>
+		<object name="wolter"/>
+		<object name="won0001"/>
+		<object name="zander"/>
+		<object name="zhang"/>
+		<object name="zhigang"/>
+		<object name="zohrabov"/>
+	</accessright>
+	<accessright name="globalDenyCabAccessByType" casesensitive="true">
+		<!--
+        This "might" be a bit "von Hinten durch die brust ins Auge"... but right
+        now I do not know a better solution for this issue.
+        It's a permission denied "access-right" - means, that all items that are
+        listed here have a restricted access. So when something is listed here,
+        then the access to this type is restricted (neg_objecttype or
+        pos_objecttype have to be specified).
+        
+        1) So as example:
+        <object name="slp" />
+        will deny the access for the cabtype 'slp' for ALL users
+        
+        2) Brand specific cabTypes:
+        <object name="slp@µ@A" />
+        will deny the access for the cabtype 'slp' for the brand Audi - all other
+        SLP cabs will be available for all users... [Please note, that the '@µ|@'
+        HAVE to be used as delimiter between cabtype and brand]
+        
+        3) when we would use:
+        <object name="slp@µ@S" pos_objecttype="user001"/> 
+        this will mean, that the access to the Seat 'slp' cab files is denied for
+        the user 'user001' (all other users have access the seat slp cabfiles...)
+        
+        4) when we would use:
+        <object name="slp@µ@V" neg_objecttype="user002"/> 
+        this will mean, that the access to the VW 'slp' cab files is granted for
+        all users except the user 'user002' (so with other words only the user
+        'user002' have access the VW slp cab files...)
+        
+        5)
+        <object name="slp" pos_objecttype="user002"/>
+        same as 3 only with the difference, that 'user002' have no access to ALL
+        slp cab files of ALL brands...
+        
+        6)
+        <object name="slp" neg_objecttype="user002"/>
+        same as 4 only with the difference, that only 'user002' have access to ALL
+        slp cab files of ALL brands... [and no other users]
+        
+        -->
+		<!-- object name="slp" pos_objecttype="A"/ -->
+		<!-- removed by request from J.Gross at 03.06.2005 -->
+		<object name="Apos"/>
+		<object name="kds#china31"/>
+		<object name="apos" pos_objecttype="fortier"/>
+		<object name="apos#graphics" pos_objecttype="fortier"/>
+	</accessright>
+	<accessright name="cab-groups">
+		<object name="elsa_updates" neg_objecttype="gozkan,keck,radkov,rupprecht"/>
+		<object name="tpl_updates_eh" neg_objecttype="accad,aguirre,alahwal,correa,delaveuve,egenau,f_ferrari,fernandez,fogliazza,fruehwein,gaete,gonzalez,ivo,kassabov,keck,kroeger,larsen,loeffler,mogio_gr,montero,mossolly,muzicka,nieto,opheim,ottosen,pedesen,piochaud,radkov,ramirez,rasmussen,ryc0001,rebollar,rodriguez_c,rupprecht,sanchez,schulz,seltmann,sempol,shokiche,simonyan,sults,tobin,torres,voskanyan"/>
+		<object name="tpl_updates_gh" neg_objecttype="accad,aguirre,alahwal,baumann,calvo,chakravarthy,delaveuve,f_ferrari,fernandez,fogliazza,fruehwein,gonzalez,ivo,kassabov,keck,kroeger,larsen,loeffler,lutz,malhotra,mogio_gr,montero,mossolly,muzicka,nieto,opheim,ottosen,pedersen,piochaud,radkov,ramirez,rasmussen,ryc0001,rebollar,rodriguez_c,rupprecht,sanchez,schulz,seltmann,sempol,setiadhy,shokiche,simonyan,sults,tobin,torres,voskanyan,weil,wibiralski,wolter"/>
+		<object name="elsawin_updates"/>
+		<!-- object name="tpl_updates_eh" pos_objecttype="original001"/ -->
+		<!-- object name="tpl_online_updates" pos_objecttype="original001"/ -->
+		<!-- object name="tpl_updates"/ -->
+	</accessright>
+	<accessright name="cab-groups-type-mapping">
+	
+		<object name="elsa_updates" neg_objecttype="hs2,hs2#~gh,hs2#~ghdb,hs2#eh,hs2#ehdb,tpl#gh,tpl#ghdb,tpl#eh,tpl#ehdb,all#res-dll,all#resdll,all#resDll"/>
+		<object name="tpl_updates_eh" pos_objecttype="hs2,hs2#eh,hs2#ehdb"/>
+		<object name="tpl_updates_gh" pos_objecttype="hs2#~gh,hs2#~ghdb"/>
+		<object name="elsawin_updates" pos_objecttype="all#res-dll,all#resdll,all#resDll"/>
+		<!-- object name="tpl_online_updates_eh" pos_objecttype="tpl#gh,tpl#ghdb,tpl#eh,tpl#ehdb"/-->
+		<!-- object name="tpl_online_updates_gh" pos_objecttype="tpl#gh,tpl#ghdb,tpl#eh,tpl#ehdb"/-->
+	</accessright>
+	<accessright name="hasDoctypeForGroup">
+		<object name="vw_si_document" pos_objecttype="original"/>
+		<object name="vw_rm2_book" neg_objecttype="gondwana"/>
+		<object name="vw_rm3_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_igg2_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_igg3_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_au_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_au3_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_ki3_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_kah3_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_wd_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_slp_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_elsahelp_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_cf_book" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_misc_document" neg_objecttype="gondwana,spanien_saga2,original_saga2,schweden_seat,usa_saga,italien_saga,russland_saga"/>
+		<object name="vw_saga2_book" pos_objecttype="original,original_saga2,spanien_saga2,schweden,polen_vw,usa_saga,italien_saga,russland_saga,russland,japan,bulgarien,daenemark,niederlande,norwegen"/>
+		<object name="vw_k3_book" pos_objecttype="original,schweden_seat,slowenien,griechenland"/>
+		<object name="vw_rc_book" pos_objecttype="original,vw_intern,brasilien,bulgarien,chinap,daenemark,england,estland,finnland,frankreich,griechenland_vw,indonesien,italien,japan,korea,kroatien,lettland,litauen,niederlande,norwegen,polen_vw,portugal_vw,rumaenien,russland,schweden,serbien-montenegro,slowakei_vw,slowenien,spanien,taiwan,thailand,tschechien_vw,tuerkei,ukraine,ungarn,usa_vwoa,audi_intern,seat_intern"/>
+		<object name="vw_rc_elsa_pro_book" pos_objecttype="original,vw_intern,brasilien,bulgarien,chinap,daenemark,england,estland,finnland,frankreich,griechenland_vw,indonesien,italien,japan,korea,kroatien,lettland,litauen,niederlande,norwegen,polen_vw,portugal_vw,rumaenien,russland,schweden,serbien-montenegro,slowakei_vw,slowenien,spanien,taiwan,thailand,tschechien_vw,tuerkei,ukraine,ungarn,usa_vwoa,audi_intern,seat_intern"/>
+		<!-- erWin-externalDocuments: These documents are only used in the erWin PubModule-->
+		<object name="vw_passthru" pos_objecttype="original"/>
+		<object name="vw_apos_book" pos_objecttype="original"/>
+		<object name="vw_ssp_book" pos_objecttype="original"/>
+		<object name="vw_us_book" pos_objecttype="original"/>
+		<object name="vw_shipment_item" pos_objecttype="original"/>
+		<object name="vw_rmexternal_book" pos_objecttype="original"/>
+		<object name="vw_auexternal_book" pos_objecttype="original"/>
+		<object name="vw_slpexternal_book" pos_objecttype="original,america"/>
+		<object name="vw_iggexternal_book" pos_objecttype="original"/>
+		<object name="vw_kiexternal_book" pos_objecttype="original"/>
+		<!-- SGMl Doctype handlers for USA -->
+		<object name="vw_sgml_rm3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sgml_ki3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sgml_igg3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sgml_kah3_book" pos_objecttype="original,gondwana,america"/>
+		<!-- SXMl Doctype handlers for USA -->
+		<object name="vw_sxml_rm3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sxml_ki3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sxml_igg3_book" pos_objecttype="original,gondwana,america"/>
+		<object name="vw_sxml_kah3_book" pos_objecttype="original,gondwana,america"/>		
+		<!-- ISLP Resource Doctype handlers -->
+		<object name="vw_islp_document" pos_objecttype="gondwana,original,vaw_markt"/>
+		<object name="vw_islp_part_book" pos_objecttype="gondwana,original,vaw_markt"/>
+		<object name="vw_islp_res_ebo_book" pos_objecttype="gondwana,original,vaw_markt"/>
+		<object name="vw_islp_res_headline_book" pos_objecttype="gondwana,original,vaw_markt"/>
+		<object name="vw_islp_res_option_book" pos_objecttype="gondwana,original,vaw_markt"/>
+		<!-- ISLP NoneVisible Doctype handlers (docs that will be not translated via GITTA)-->
+		<object name="vw_islp_res_symbol" pos_objecttype="XXX_DUMMY_GROUP_XXX"/>
+		<object name="vw_islp_list_wire" pos_objecttype="XXX_DUMMY_GROUP_XXX"/>
+		<object name="vw_islp_list_connector" pos_objecttype="XXX_DUMMY_GROUP_XXX"/>
+		<object name="vw_islp_multiterm" pos_objecttype="XXX_DUMMY_GROUP_XXX"/>
+		<!--
+        the cabfile's will be only accessable internaly - no USER ever will see this
+        DocumentType for translation purposes [marq24: I am not sure, if it would not
+        be enough to declare this doctype as NONE GITTA doctype - but really I am not
+        sure... ]
+        -->
+		<object name="cabfile" pos_objecttype="XXX_DUMMY_GROUP_XXX"/>
+	</accessright>
+	<accessright name="hasDoctypeForUser">
+		<object name="vw_rm2_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_rm3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_igg2_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_igg3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_au_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_au3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_ki3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_kah3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_wd_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_elsahelp_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_cf_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_misc_document" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_slp_book" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_skoda,test_rm_seat,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_skoda1,test_rm_seat1,test_rm_nutz1,test_op_all,test_op_vaw,test_op_fes,test_op_comsa,test_op_mrx,test_op_mry,test_op_mrz,test_op_thiesen,test_op_vaw1,test_op_fes1,test_op_comsa1,test_op_mrx1,test_op_mry1,test_op_mrz1,test_op_thiesen1,test_op_vaw2,test_op_fes2,test_op_comsa2,test_op_mrx2,test_op_mry2,test_op_mrz2,test_op_thiesen2,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann"/>
+		<object name="vw_saga2_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_k3_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_rc_book" pos_objecttype="gondwana001,gondwana002"/>
+		<object name="vw_rc_elsa_pro_book" pos_objecttype="gondwana001,gondwana002"/>
+		<!-- SGML Doctype handlers for USA -->
+		<!-- siehe accessright name="hasDoctypeBlockForUser" -->
+		<!-- ISLP Resource Doctype handlers -->
+		<object name="vw_islp_document" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_skoda,test_rm_seat,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_skoda1,test_rm_seat1,test_rm_nutz1,test_op_all,test_op_vaw,test_op_fes,test_op_comsa,test_op_mrx,test_op_mry,test_op_mrz,test_op_vaw1,test_op_fes1,test_op_comsa1,test_op_mrx1,test_op_mry1,test_op_mrz1,test_op_vaw2,test_op_fes2,test_op_comsa2,test_op_mrx2,test_op_mry2,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann"/>
+		<object name="vw_islp_part_book" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,rm_drygalla,rm_hesse,rm_zrieschling"/>
+		<object name="vw_islp_res_ebo_book" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,rm_drygalla,rm_hesse,rm_zrieschling"/>
+		<object name="vw_islp_res_headline_book" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,rm_drygalla,rm_hesse,rm_zrieschling"/>
+		<object name="vw_islp_res_option_book" pos_objecttype="gondwana001,gondwana002,kupfer,test_rm_all,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_all1,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,rm_drygalla,rm_hesse,rm_zrieschling"/>
+		<!--DUMMY IMPL of ALL-DOCUMENTS-->
+		<object name="vw_si_document" pos_objecttype="gondwana001"/>
+		<object name="vw_slpexternal_book" pos_objecttype="richa,zumbach"/>
+	</accessright>
+	<accessright name="hasDoctypeBlockForUser">
+		<!-- SGML Doctype handlers for USA -->
+		<object name="vw_sgml_rm3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach"/>
+		<object name="vw_sgml_ki3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach"/>
+		<object name="vw_sgml_igg3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach"/>
+		<object name="vw_sgml_kah3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach"/>
+		<object name="vw_au_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_au3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_cf_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_elsahelp_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_igg3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach,harder,yambrick,trahey,dubay,dequin,kowalski,parisi,luzynski,walsh"/>
+		<object name="vw_k3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_ki3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach,harder,yambrick,trahey,dubay,dequin,kowalski,parisi,luzynski,walsh"/>
+		<object name="vw_kah3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach,harder,yambrick,trahey,dubay,dequin,kowalski,parisi,luzynski,walsh"/>
+		<object name="vw_misc_document" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_rm2_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach,harder,yambrick,trahey,dubay,dequin,kowalski,parisi,luzynski,walsh"/>
+		<object name="vw_rm3_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,richa,zumbach,harder,yambrick,trahey,dubay,dequin,kowalski,parisi,luzynski,walsh"/>
+		<object name="vw_saga2_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_rc_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_rc_elsa_pro_book" pos_objecttype="kupfer,test_op_all,test_op_vaw,test_op_vaw1,test_op_vaw2,test_op_fes,test_op_fes1,test_op_fes2,test_op_comsa,test_op_comsa1,test_op_comsa2,test_op_mrx,test_op_mrx1,test_op_mrx2,test_op_mry,test_op_mry1,test_op_mry2,test_op_mrz,test_op_mrz1,test_op_mrz2,test_op_thiesen,test_op_thiesen1,test_op_thiesen2,op_srodriguez,op_jrodriguez,op_fuentes,op_vidal,op_malek,op_zverec,op_schaper,op_bruemmer,op_gilewski,op_kriegler,op_borges,op_kinoshita,op_silva,op_costa,op_madeira,test_rm_vw,test_rm_audi,test_rm_seat,test_rm_skoda,test_rm_nutz,test_rm_vw1,test_rm_audi1,test_rm_seat1,test_rm_skoda1,test_rm_nutz1,rm_martinez,rm_sergio,rm_kovar,rm_weil,rm_soehnel,niemeyer,rm_hoppe,rm_fahr,rm_schaar,rm_diedecke,rm_terpoorten,rm_silva,rm_kiss,rm_keck,op_grominski,op_suelflow,op_lemmnitz,rm_drygalla,rm_hesse,rm_zrieschling,op_tautenhahn,op_seidel,op_noetzoldt,op_hecker,op_wiskow,op_dobbrick,op_milinkovic,op_schroeder,op_goder,op_herrmann,parisi,yambrick,harder,trahey,dubay,dequin,kowalski,richa,zumbach,luzynski,walsh"/>
+		<object name="vw_slp_book" pos_objecttype="vanputten,parisi,yambrick,harder,trahey,dubay,luzynski,walsh"/>
+		<object name="vw_slpexternal_book" pos_objecttype="vanputten,fortier,dequin,harder,parisi,yambrick,brown,trahey,dubay,kowalski,luzynski,walsh"/>
+	</accessright>
+	<!--
+    This is a complete new AccessRight -> it's better a definition per user!
+    the List specifies for a user (or a group) which langauges sould be checked
+    for the translation Report function -> the Fremdsprachenzentrale is not
+    interessted in the ja-JP, ru-RU or ko-KO langauges... So we can specify for
+    each user (or group) which languages should be checked!
+    -->
+	<accessright name="translationReportLanguages" casesensitive="true">
+		<object name="gondwana" pos_objecttype="en-GB,ja-JP"/>
+		<object name="original" pos_objecttype="en-GB,es-ES,it-IT,fr-FR,sv-SE"/>
+		<object name="original001" pos_objecttype="zh-CH"/>
+	</accessright>
+	<!-- SIDIFF -->
+	<accessright name="versionXmlDiff">
+		<object name="original001" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+		<object name="kuhlmann01" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+		<object name="gondwana001" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+	</accessright>	
+	<accessright name="documentXmlDiff">
+		<object name="original001" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+		<object name="kuhlmann01" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+		<object name="gondwana001" pos_objecttype="vw_rm3_book,vw_igg3_book,vw_ki3_book" />
+	</accessright>
+	<accessright name="fileXmlDiff">
+		<object name="kuhlmann01" pos_objecttype="DUMMY" />
+	</accessright>
+	<!-- MKB-Tool -->
+	<accessright name="mkbTool">
+		<object name="kuhlmann01" pos_objecttype="DUMMY"/>
+	</accessright>
+	
+</UserRightConfig>

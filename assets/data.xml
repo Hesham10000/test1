@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserRightConfig>
+		<!-- Production properties -->
+	<!--
+        - the pos_objecttype attribute can be used in order to give the user
+          only the access right for the listed objects
+        - the neg_objecttype attribute can be used in order to give the user
+          access to ALL objects, except the listed ones
+        - it is NOT possible (right now) to use the pos_objecttype and the
+          neg_objecttype attribute at the same time! When you specify both
+          attributes only the pos_objecttype will take effect, the content
+          of the neg_objecttype will be IGNORED.
+        
+        so when there exist the Objects A, B, C and D, then pos_objecttype ="A,B"
+        would be identical to neg_objecttype ="C,D" with the exception, that when
+        the Object list will be extended to A,B,C,D,E then the user will auto-
+        matically get access to obejct 'E' when the neg_objecttype attribute is
+        used. In the case of the use of pos_objecttype the ADMIN have to take
+        action everytime a new object is added to the list..
+    -->
+	<accessright name="hasCopyAsTranslate" always-true="true">
+	</accessright>
+	<accessright name="isTranslator" always-true="true">
+	</accessright>
+	<!--accessright name="isTranslationManager">
+		<object name="parisi"/>
+	</accessright-->
+	<accessright name="isNoTranslator">
+		<object name="trahey"/>
+		<object name="harder"/>
+		<!--object name="parisi"/-->
+		<object name="yambrick"/>
+		<object name="dubay"/>
+		<!--object name="richa"/-->
+		<object name="zumbach"/>
+		<object name="luzynski"/>
+		<object name="walsh"/>
+	</accessright>
+	<accessright name="isAuthor">
+		<object name="test_op_all"/>
+		<object name="test_op_vaw"/>
+		<object name="test_op_vaw1"/>
+		<object name="test_op_vaw2"/>
+		<object name="test_op_fes"/>
+		<object name="test_op_fes1"/>
+		<object name="test_op_fes2"/>
+		<object name="test_op_comsa"/>
+		<object name="test_op_comsa1"/>
+		<object name="test_op_comsa2"/>
+		<object name="test_op_mrx"/>
+		<object name="test_op_mrx1"/>
+		<object name="test_op_mrx2"/>
+		<object name="test_op_mry"/>
+		<object name="test_op_mry1"/>
+		<object name="test_op_mry2"/>
+		<object name="test_op_mrz"/>
+		<object name="test_op_mrz1"/>
+		<object name="test_op_mrz2"/>
+		<object name="test_op_thiesen"/>
+		<object name="test_op_thiesen1"/>
+		<object name="test_op_thiesen2"/>
+		<object name="america001"/>
+		<object name="vanputten"/>
+		<object name="fortier"/>
+		<object name="trahey"/>
+		<object name="brown"/>
+		<object name="harder"/>
+		<object name="parisi"/>
+		<object name="yambrick"/>
+		<object name="dubay"/>
+		<object name="richa"/>
+		<object name="zumbach"/>
+		<object name="luzynski"/>
+		<object name="walsh"/>
+		<object name="gondwana001"/>
+		<object name="gondwana002"/>
+		<object name="op_srodriguez"/>
+		<object name="op_jrodriguez"/>
+		<object name="op_fuentes"/>
+		<object name="op_vidal"/>
+		<object name="op_malek"/>
+		<object name="op_zverec"/>
+		<object name="op_schaper"/>
+		<object name="op_bruemmer"/>
+		<object name="op_gilewski"/>
+		<object name="op_kriegler"/>
+		<object name="op_borges"/>
+		<object name="op_kinoshita"/>
+		<object name="op_silva"/>
+		<object name="op_costa"/>
+		<object name="op_madeira"/>
+		<object name="niemeyer"/>
+		<object name="op_grominski"/>
+		<object name="op_suelflow"/>
+		<object name="op_lemmnitz"/>
+		<object name="op_tautenhahn"/>
+		<object name="op_seidel"/>
+		<object name="op_noetzoldt"/>
+		<object name="op_hecker"/>
+		<object name="op_wiskow"/>
+		<object name="op_dobbrick"/>
+		<object name="op_milinkovic"/>
+		<object name="op_schroeder"/>
+		<object name="op_goder"/>
+		<object name="op_herrmann"/>
+	</accessright>
+	<!--
+    OperatorUsers can only see vw_si_documents, that have either set NONE
+    vw_operator attribute, or where the vw_operator attribute have the
+    value that is listed in the pos_objecttype list.
+    As name only USERNAMES make sense! (no groups/markets)
+    -->
+	<accessright name="isOperatorUser" casesensitive="true">
+		<object name="test_op_all" pos_objecttype="VAW,FES,COMSA,OPMRX,OPMRY,OPMRZ,THIESEN"/>
+		<object name="test_op_vaw" pos_objecttype="VAW"/>
+		<object name="test_op_vaw1" pos_objecttype="VAW"/>
+		<object name="test_op_vaw2" pos_objecttype="VAW"/>
+		<object name="test_op_fes" pos_objecttype="FES"/>
+		<object name="test_op_fes1" pos_objecttype="FES"/>
+		<object name="test_op_fes2" pos_objecttype="FES"/>
+		<object name="test_op_comsa" pos_objecttype="COMSA"/>
+		<object name="test_op_comsa1" pos_objecttype="COMSA"/>
+		<object name="test_op_comsa2" pos_objecttype="COMSA"/>
+		<object name="test_op_mrx" pos_objecttype="OPMRX"/>
+		<object name="test_op_mrx1" pos_objecttype="OPMRX"/>
+		<object name="test_op_mrx2" pos_objecttype="OPMRX"/>
+		<object name="test_op_mry" pos_objecttype="OPMRY"/>
+		<object name="test_op_mry1" pos_objecttype="OPMRY"/>
+		<object name="test_op_mry2" pos_objecttype="OPMRY"/>
+		<object name="test_op_mrz" pos_objecttype="OPMRZ"/>
+		<object name="test_op_mrz1" pos_objecttype="OPMRZ"/>
+		<object name="test_op_mrz2" pos_objecttype="OPMRZ"/>
+		<object name="test_op_thiesen" pos_objecttype="THIESEN"/>
+		<object name="test_op_thiesen1" pos_objecttype="THIESEN"/>
+		<object name="test_op_thiesen2" pos_objecttype="THIESEN"/>
+		<object name="op_srodriguez" pos_objecttype="MAZEL"/>
+		<object name="op_jrodriguez" pos_objecttype="MAZEL"/>
+		<object name="op_fuentes" pos_objecttype="MAZEL"/>
+		<object name="op_vidal" pos_objecttype="MAZEL"/>
+		<object name="op_malek" pos_objecttype="SKODA"/>
+		<object name="op_zverec" pos_objecttype="ATC"/>
+		<object name="op_schaper" pos_objecttype="FSZM"/>
+		<object name="op_bruemmer" pos_objecttype="FSZM"/>
+		<object name="op_gilewski" pos_objecttype="FSZM"/>
+		<object name="op_kriegler" pos_objecttype="FSZM"/>
+		<object name="niemeyer" pos_objecttype="FSZM"/>
+		<object name="op_borges" pos_objecttype="ARVATO"/>
+		<object name="op_kinoshita" pos_objecttype="ARVATO"/>
+		<object name="op_silva" pos_objecttype="ARVATO"/>
+		<object name="op_costa" pos_objecttype="ARVATO"/>
+		<object name="op_madeira" pos_objecttype="ARVATO"/>
+		<object name="op_grominski" pos_objecttype="RUECKER"/>
+		<object name="op_suelflow" pos_objecttype="RUECKER"/>
+		<object name="op_lemmnitz" pos_objecttype="RUECKER"/>
+		<object name="op_tautenhahn" pos_objecttype="FES"/>
+		<object name="op_seidel" pos_objecttype="FES"/>
+		<object name="op_noetzoldt" pos_objecttype="ARVATO"/>
+		<object name="op_hecker" pos_objecttype="ARVATO"/>
+		<object name="op_wiskow" pos_objecttype="ARVATO"/>
+		<object name="op_dobbrick" pos_objecttype="FSZM"/>
+		<object name="op_milinkovic" pos_objecttype="ARVATO"/>
+		<object name="op_schroeder" pos_objecttype="ARVATO"/>
+		<object name="op_goder" pos_objecttype="ARVATO"/>
+		<object name="op_goder" pos_objecttype="FSZM"/>
+	</accessright>
+	
+</UserRightConfig>
